@@ -1,0 +1,291 @@
+/* Style Reset */
+/* Style Reset */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+	--dark: #374151;
+	--darker: #1F2937;
+	--darkest: #111827;
+	--grey: #6B7280;
+	--pink: #EC4899;
+	--purple: #8B5CF6;
+	--light: #EEE;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  position: relative;
+  font-family: system-ui;
+  font-size: 62.5%; 
+  min-height: 100%;
+}
+
+body {
+  background-image: url("images/indianflag.gif");
+  background-size: cover;
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 1.6;
+  color: black;
+}
+
+.page-area {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box; 
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.input_section {
+  display: flex;
+  margin: auto;
+  position: relative;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+#new-task-form {
+	display: flex;;
+}
+
+input,
+textarea,
+button {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+/* Elements
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+h1, h2, h3, h4, h5, h6 {
+  color: rgb(32, 130, 32);
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+h1 { font-size: 4.0rem; line-height: 1.2;  letter-spacing: -.1rem;}
+h2 { font-size: 3.6rem; line-height: 1.25; letter-spacing: -.1rem; }
+h3 { font-size: 3.2rem; line-height: 1.3;  letter-spacing: -.1rem; }
+h4 { font-size: 2.8rem; line-height: 1.35; letter-spacing: -.08rem; }
+h5 { font-size: 2.4rem; line-height: 1.5;  letter-spacing: -.05rem; }
+h6 { font-size: 2.0rem; line-height: 1.6;  letter-spacing: 0; }
+
+/* To-Do List Styles */
+
+.result {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: var(--darkest);
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#listitem {
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+  background-color: orange;
+  color: black;
+}
+
+#cre-btn {
+  padding: 0px;
+  font-size: 15px;
+  background-color: rgb(32, 109, 32);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+  border: 1rem solid green;
+  border-radius: 25px;
+  background: #73AD21;
+  padding: 20px;
+  background-color: orange;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item_name{
+  flex: 1;
+  margin-right: 10px;
+  text-align: center;
+  color: green;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-size: large;
+}
+
+#button_div_3{
+  display: flex;
+  justify-content: right;
+  max-width:  fit-content;
+}
+#button_div_2{
+  text-align: center;
+  overflow-wrap: break-word;
+}
+#button_div_1{
+  display: flex;
+  justify-content: left;
+  max-width: fit-content;
+}
+
+.del-btn,
+.upd-btn {
+  background-color: green;
+  border: none;
+  color: black;
+  padding: 15px 25px;
+  padding-right: 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.checkbox {
+  margin-right: 10px;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+button svg {
+  margin-right: 5px;
+}
+
+/* Customize the label (the container) */
+/* .container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+} */
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+/* .container input:checked ~ .checkmark:after {
+  display: block;
+} */
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* Equal Spacing */
+li > * {
+  flex: 1;
+  margin-right: 10px;
+  text-align: center;
+}
+  
+/* Utilities
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.full-width {
+  width: 100%;
+  box-sizing: border-box;
+}
+.max-full-width {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.preset {
+	font-family: "Courier New", monospace;
+	white-space: pre;
+}
+.pull-right {float: right;}
+.pull-left {float: left;}
+  
+/* @ Media elements */
+/* For devices larger than 400px */
+@media (min-width: 400px) {
+  .container {
+    width: 85%;
+    padding: 0; }
+}
+/* For devices larger than 550px */
+@media (min-width: 550px) {
+  .container {width: 80%;}
+  h1 { font-size: 4.0rem; }
+  h2 { font-size: 3.6rem; }
+  h3 { font-size: 3.2rem; }
+  h4 { font-size: 2.8rem; }
+  h5 { font-size: 2.4rem; }
+  h6 { font-size: 2.0rem; }
+}
+
